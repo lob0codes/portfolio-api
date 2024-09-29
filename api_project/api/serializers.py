@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from .models import Project, Tag
+from .models import Project, Skill, Tag
+
+
+class SkillSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Skill
+        fields = ['name', 'image', 'experience']
 
 
 class TagSerializer(serializers.ModelSerializer):
