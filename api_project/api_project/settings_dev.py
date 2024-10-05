@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('LOCAL_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['lob0codes.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -136,14 +136,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',  # The default port for create-react-app
 ]
-
-REST_FRAMEWORK = {
-    'DEFAULT_THROTTLE_CLASSES': [
-        'rest_framework.throttling.AnonRateThrottle',  # For anonymous users
-        'rest_framework.throttling.UserRateThrottle',  # For authenticated users
-    ],
-    'DEFAULT_THROTTLE_RATES': {
-        'anon': '100/day',  # Limit anonymous users to 100 requests per day
-        'user': '1000/day',  # Limit authenticated users to 1000 requests per day
-    }
-}

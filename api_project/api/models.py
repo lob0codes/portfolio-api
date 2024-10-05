@@ -8,7 +8,7 @@ class Skill(models.Model):
     class ExperiencieLevel(models.TextChoices):
         BEGINNER = 'Beginner', 'Beginner'
         INTERMEDIATE = 'Intermediate', 'Intermediate'
-        EXPERT = 'Expert', 'Expert'
+        PROFICIENT = 'Proficient', 'Proficient'
 
     experience = models.CharField(
         max_length=20,
