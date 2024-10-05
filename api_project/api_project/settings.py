@@ -86,8 +86,7 @@ DATABASES = {
         'NAME': env('PA_DB_NAME'),
         'USER': env('PA_DB_USER'),
         'PASSWORD': env('PA_DB_PASSWORD'),
-        'HOST': env('PA_DB_HOST'),
-        'PORT': env('PA_DB_PORT')
+        'HOST': env('PA_DB_HOST')
     }
 }
 
