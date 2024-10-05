@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 
+import os
 from pathlib import Path
 import environ
 env = environ.Env()
@@ -146,3 +147,6 @@ REST_FRAMEWORK = {
         'user': '1000/day',  # Limit authenticated users to 1000 requests per day
     }
 }
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
