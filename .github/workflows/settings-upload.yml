@@ -18,9 +18,9 @@ jobs:
       - name: Select and Upload Settings File
         run: |
           if [[ $GITHUB_REF == refs/heads/main ]]; then
-            cp my-django-api/settings_prod.py my-django-api/settings.py
+            cp api_project/settings_prod.py api_project/settings.py
           elif [[ $GITHUB_REF == refs/heads/test ]]; then
-            cp my-django-api/settings_test.py my-django-api/settings.py
+            cp api_project/settings_test.py api_project/settings.py
           else
             echo "Using local settings.py"
           fi
@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add my-django-api/settings.py
+          git add api_project/settings.py
           git commit -m "Update settings.py for branch $GITHUB_REF_NAME"
           git push
