@@ -1,5 +1,8 @@
 name: Deploy Django Settings
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -26,6 +29,8 @@ jobs:
           fi
 
       - name: Push Updated settings.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
