@@ -30,7 +30,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           if [[ `git status --porcelain` ]]; then
-            git add api_project/settings.py
+            git add api_project/api_project/settings.py
             git commit -m "Update settings.py for branch $GITHUB_REF_NAME"
             git push
           else
