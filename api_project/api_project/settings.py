@@ -134,7 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
     # The default port for create-react-app
-    'https://portfolio-mu-tan-43.vercel.app/',
+    'https://portfolio-mu-tan-43.vercel.app',
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
